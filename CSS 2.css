@@ -1,0 +1,34 @@
+.color-example
+{
+    color:aqua;
+    border-color: antiquewhite;
+    border-width: medium;
+    
+}
+.header-example
+{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: blueviolet;
+}
+.list-example
+{
+   list-style-type: lower-alpha; 
+   color: rgb(160, 164, 172);
+}
+.text-example
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: medium;
+    font: italic;
+    text-decoration: underline;
+}
+.div-example
+{
+    background-color: khaki;
+    border-style: ridge;
+}
+.body1
+{
+    background-color: beige;
+}
