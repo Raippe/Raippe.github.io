@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #001f3f;
+}
+
+.navbar {
+  background-color: #001f3f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.navbar nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th,
+table td {
+  border: 1px solid #001f3f;
+  padding: 10px;
+  text-align: left;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+footer {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+.contact-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.contact-form label {
+  margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #001f3f;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  background-color: #001f3f;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  background-color: #003366;
+}
+
+.map-container {
+  margin-top: 20px;
+  border: 2px solid #001f3f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #001f3f;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: block;
+}
+
+
+.hamburger {
+  display: block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #001f3f;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+
+
+@media (min-width: 769px) {
+  /* Desktopilla sidebar piilossa kokonaan */
+  .sidebar {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  main {
+    padding: 40px 20px;
+  }
+
+  .navbar nav {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobiilissa navbar nav sarakkeiksi */
+  .navbar nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+  }
+}
+#ottelut {
+  margin-top: 40px;
+}
+
+#ottelut table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#ottelut th, #ottelut td {
+  border: 1px solid #001f3f;
+  padding: 10px;
+  text-align: left;
+}
+
+#ottelut th {
+  background-color: #001f3f;
+  color: white;
+}
+#ottelukalenteri table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#ottelukalenteri th, #ottelukalenteri td {
+  border: 1px solid #001f3f;
+  padding: 10px;
+  text-align: left;
+}
+
+#ottelukalenteri th {
+  background-color: #001f3f;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #ottelukalenteri table, #ottelukalenteri thead, #ottelukalenteri tbody, #ottelukalenteri th, #ottelukalenteri td, #ottelukalenteri tr {
+    display: block;
+  }
+
+  #ottelukalenteri thead tr {
+    display: none;
+  }
+
+  #ottelukalenteri td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #001f3f;
+  }
+
+  #ottelukalenteri td::before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  #ottelukalenteri td:nth-of-type(1)::before { content: "Päivämäärä"; }
+  #ottelukalenteri td:nth-of-type(2)::before { content: "Aika"; }
+  #ottelukalenteri td:nth-of-type(3)::before { content: "Ottelu"; }
+  #ottelukalenteri td:nth-of-type(4)::before { content: "Paikka"; }
+  #ottelukalenteri td:nth-of-type(5)::before { content: "Tulos"; }
+  #ottelukalenteri td:nth-of-type(6)::before { content: "Maalintekijät"; }
+}
+.torneopal_widget .scoretable {
+  width:400px;
+  font-family:Ubuntu,Arial;
+  border:1px solid #aac;
+  }
+  .torneopal_widget .scoretable th{
+  text-align:center;
+  background:#aac;
+  color:#fff;
+  padding:4px 2px;
+  }
+  .torneopal_widget .scoretable th.team,
+  .torneopal_widget .scoretable td.team
+  {
+  text-align:left;
+  }
+
+  .torneopal_widget .scoretable td{
+  text-align:center;
+  background:#fff;
+  padding:4px 2px;
+  }
+  .torneopal_widget .scoretable tr:nth-child(even) td{
+  background:#eee;
+  }
+  .torneopal_widget #updated{
+  display:none;
+  }
+
